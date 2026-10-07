@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Пример HTML файла со всеми базовыми тегами">
+    <meta name="keywords" content="HTML, теги, атрибуты, пример">
+    <meta name="author" content="Автор">
+    <title>Пример базовых HTML тегов</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .highlight { background-color: yellow; padding: 5px; }
+        table { border-collapse: collapse; margin: 10px 0; }
+        th, td { border: 1px solid #333; padding: 8px; }
+        img { max-width: 200px; }
+    </style>
+    <script>
+        function sayHello() {
+            alert('Привет из JavaScript!');
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Заголовки -->
+    <h1>Заголовок H1</h1>
+    <h2>Заголовок H2</h2>
+    <h3>Заголовок H3</h3>
+    <h4>Заголовок H4</h4>
+    <h5>Заголовок H5</h5>
+    <h6>Заголовок H6</h6>
+
+    <hr>
+
+    <!-- Абзацы и форматирование текста -->
+    <p>Это обычный абзац текста. Здесь есть <strong>жирный текст</strong>,
+       <em>курсив</em>, <u>подчёркнутый</u>, <s>зачёркнутый</s>,
+       <mark>выделенный</mark>, <small>маленький</small>,
+       <big>большой</big>, H<sub>2</sub>O и E=mc<sup>2</sup>.</p>
+
+    <p>Текст с <span class="highlight">выделением через span</span> и
+       <code>кодом внутри строки</code>.</p>
+
+    <pre>
+Это предформатированный
+      текст, где сохраняются
+   отступы и пробелы.
+    </pre>
+
+    <blockquote cite="https://example.com">
+        Это цитата из какого-то источника.
+    </blockquote>
+
+    <!-- Ссылки -->
+    <p>
+        <a href="https://example.com" target="_blank" title="Откроется в новой вкладке">Внешняя ссылка</a> |
+        <a href="#section1">Ссылка на якорь</a> |
+        <a href="mailto:test@example.com">Отправить email</a> |
+        <a href="tel:+79991234567">Позвонить</a>
+    </p>
+
+    <!-- Списки -->
+    <h3>Маркированный список</h3>
+    <ul>
+        <li>Первый элемент</li>
+        <li>Второй элемент</li>
+        <li>Третий элемент</li>
+    </ul>
+
+    <h3>Нумерованный список</h3>
+    <ol type="1" start="1">
+        <li>Первый</li>
+        <li>Второй</li>
+        <li>Третий</li>
+    </ol>
+
+    <h3>Список определений</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Язык разметки гипертекста</dd>
+        <dt>CSS</dt>
+        <dd>Каскадные таблицы стилей</dd>
+    </dl>
+
+    <!-- Изображение -->
+    <h3>Изображение</h3>
+    <img src="https://via.placeholder.com/200x100"
+         alt="Заглушка изображения"
+         width="200"
+         height="100"
+         title="Пример изображения">
+
+    <!-- Таблица -->
+    <h3>Таблица</h3>
+    <table>
+        <caption>Заголовок таблицы</caption>
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Возраст</th>
+                <th>Город</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Иван</td>
+                <td>25</td>
+                <td>Москва</td>
+            </tr>
+            <tr>
+                <td>Мария</td>
+                <td>30</td>
+                <td>Санкт-Петербург</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Итого: 2 человека</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Формы -->
+    <h3>Форма</h3>
+    <form action="/submit" method="post">
+        <p>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" placeholder="Введите имя" required>
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com">
+        </p>
+        <p>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password">
+        </p>
+        <p>
+            <label for="age">Возраст:</label>
+            <input type="number" id="age" name="age" min="1" max="120">
+        </p>
+        <p>
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date">
+        </p>
+        <p>
+            <label for="color">Цвет:</label>
+            <input type="color" id="color" name="color">
+        </p>
+        <p>
+            Пол:
+            <label><input type="radio" name="gender" value="male"> Мужской</label>
+            <label><input type="radio" name="gender" value="female"> Женский</label>
+        </p>
+        <p>
+            Увлечения:
+            <label><input type="checkbox" name="hobby" value="sport"> Спорт</label>
+            <label><input type="checkbox" name="hobby" value="music"> Музыка</label>
+            <label><input type="checkbox" name="hobby" value="reading"> Чтение</label>
+        </p>
+        <p>
+            <label for="country">Страна:</label>
+            <select id="country" name="country">
+                <option value="">-- Выберите --</option>
+                <option value="ru">Россия</option>
+                <option value="kz">Казахстан</option>
+                <option value="by">Беларусь</option>
+            </select>
+        </p>
+        <p>
+            <label for="message">Сообщение:</label><br>
+            <textarea id="message" name="message" rows="4" cols="40" placeholder="Введите текст..."></textarea>
+        </p>
+        <p>
+            <label for="file">Файл:</label>
+            <input type="file" id="file" name="file">
+        </p>
+        <p>
+            <input type="hidden" name="token" value="abc123">
+            <input type="submit" value="Отправить">
+            <input type="reset" value="Сбросить">
+            <button type="button" onclick="sayHello()">Кнопка с JS</button>
+        </p>
+    </form>
+
+    <!-- Мультимедиа -->
+    <h3>Аудио</h3>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <h3>Видео</h3>
+    <video width="320" height="240" controls poster="preview.jpg">
+        <source src="video.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+
+    <!-- Семантические теги -->
+    <hr>
+    <header>
+        <h2>Семантический header</h2>
+    </header>
+
+    <nav>
+        <a href="#home">Главная</a> |
+        <a href="#about">О нас</a> |
+        <a href="#contacts">Контакты</a>
+    </nav>
+
+    <main>
+        <section id="section1">
+            <h3>Секция (section)</h3>
+            <article>
+                <h4>Статья (article)</h4>
+                <p>Содержимое статьи с <time datetime="2024-01-01">датой публикации</time>.</p>
+            </article>
+        </section>
+
+        <aside>
+            <h4>Боковая панель (aside)</h4>
+            <p>Дополнительная информация.</p>
+        </aside>
+    </main>
+
+    <details>
+        <summary>Нажмите, чтобы раскрыть</summary>
+        <p>Скрытый текст, который показывается при клике.</p>
+    </details>
+
+    <figure>
+        <img src="https://via.placeholder.com/150" alt="Пример" width="150">
+        <figcaption>Подпись к изображению (figcaption)</figcaption>
+    </figure>
+
+    <footer>
+        <p>&copy; 2024 Пример. Все права защищены.</p>
+        <address>Связь: <a href="mailto:info@example.com">info@example.com</a></address>
+    </footer>
+
+    <hr>
+
+    <!-- Специальные символы (HTML-entities) -->
+    <p>Спецсимволы: &lt; &gt; &amp; &quot; &apos; &nbsp; &copy; &reg; &trade; &euro; &pound; &yen;</p>
+
+</body>
+</html>
