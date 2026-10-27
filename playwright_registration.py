@@ -28,5 +28,5 @@ with sync_playwright() as playwright:
     expect(dashboard_check).to_be_visible()
     expect(dashboard_check).to_have_text("Dashboard")
 
-    # Отладочная функция ожидания в 5 секунд
+    # Отладочная функция: ожидание в 5 секунд
     # page.wait_for_timeout(5000)
