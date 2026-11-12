@@ -2,6 +2,7 @@ from playwright.sync_api import sync_playwright, expect
 import pytest
 
 
+# Добавлены декораторы
 @pytest.mark.courses
 @pytest.mark.regression
 def test_empty_courses_list():
