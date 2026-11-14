@@ -38,6 +38,9 @@ def initialize_browser_state(playwright: Playwright):
     # Сохраняем состояние контекста в json файл
     context.storage_state(path='browser-state.json')
 
+    # Закрываем браузер
+    browser.close()
+
 @pytest.fixture # scope=function по умолчанию
 def chromium_page_with_state(initialize_browser_state,playwright: Playwright) -> Page:
     # Запускаем браузер и открываем новую страницу
@@ -49,3 +52,6 @@ def chromium_page_with_state(initialize_browser_state,playwright: Playwright) ->
     page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
 
     yield page
+
+    # Закрываем браузер
+    browser.close()
