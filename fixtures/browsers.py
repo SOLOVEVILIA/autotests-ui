@@ -41,6 +41,7 @@ def initialize_browser_state(playwright: Playwright):
     # Закрываем браузер
     browser.close()
 
+
 @pytest.fixture # scope=function по умолчанию
 def chromium_page_with_state(initialize_browser_state,playwright: Playwright) -> Page:
     # Запускаем браузер и открываем новую страницу
