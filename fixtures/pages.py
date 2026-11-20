@@ -4,7 +4,6 @@ from playwright.sync_api import Page
 from pages.login_page import LoginPage
 from pages.registration_page import RegistrationPage
 from pages.dashboard_page import DashboardPage
-from playwright_registration import context
 
 
 # Инициализация страницы LoginPage
